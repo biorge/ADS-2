@@ -81,4 +81,4 @@ double cosn(double x, uint16_t count) {
     znak *= -1;
   }
   return res;
-} 
+}
