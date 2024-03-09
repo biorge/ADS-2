@@ -49,20 +49,16 @@ double expn(double x, uint16_t count) {
 
 double sinn(double x, uint16_t count) {
   long double res = x;
-  double znak = -1;
-  for (uint16_t i = 3; i <= 2*count; i += 2) {
-    res += znak * calcItem(x, i);
-    znak *= -1;
+  for (uint16_t i = 2; i <= count; i ++) {
+    res += pown(-1, i - 1) * calcItem(x, 2 * i - 1);
   }
   return res;
 }
 
 double cosn(double x, uint16_t count) {
   long double res = 1;
-  double znak = -1;
-  for (uint16_t i = 2; i <= 2*count; i += 2) {
-    res += znak * calcItem(x, i);
-    znak *= -1;
+  for (uint16_t i = 2; i <= count; i ++) {
+    res += pown(-1, i - 1) * calcItem(x, 2 * i -2);
   }
   return res;
 }
