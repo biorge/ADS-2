@@ -51,7 +51,7 @@ double sinn(double x, uint16_t count) {
   long double res = x;
   double znak = -1;
   for (uint16_t i = 3; i <= count; i += 2) {
-    res += znak * (pown(x, i) / fact(i));
+    res += znak * calcItem(x,i);
     znak *= -1;
   }
   return res;
@@ -61,7 +61,7 @@ double cosn(double x, uint16_t count) {
   long double res = 1;
   double znak = -1;
   for (uint16_t i = 2; i <= count; i += 2) {
-    res += znak * (pown(x, i) / fact(i));
+    res += znak * calcItem(x,i);
     znak *= -1;
   }
   return res;
